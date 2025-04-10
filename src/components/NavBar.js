@@ -1,0 +1,86 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAccessibilityMenuOpen, setIsAccessibilityMenuOpen] = useState(false);
+
+  return (
+    <nav className="bg-blue-600 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link to="/" className="text-2xl font-bold">EmpowerJobs</Link>
+        
+        <div className="hidden md:flex space-x-6">
+          <Link to="/" className="hover:text-blue-200">Home</Link>
+          <Link to="/jobs" className="hover:text-blue-200">Find Jobs</Link>
+          <Link to="/training" className="hover:text-blue-200">Training</Link>
+          <Link to="/profile" className="hover:text-blue-200">My Profile</Link>
+          <Link to="/employer" className="hover:text-blue-200">For Employers</Link>
+        </div>
+        
+        <div className="flex items-center">
+          <button 
+            aria-label="Accessibility Options" 
+            className="bg-blue-700 p-2 rounded-full mr-4"
+            onClick={() => setIsAccessibilityMenuOpen(!isAccessibilityMenuOpen)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v4l2 2"></path>
+            </svg>
+          </button>
+          
+          <button 
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      {isMenuOpen && (
+        <div className="container mx-auto mt-4 p-4 bg-blue-700 rounded-lg md:hidden">
+          <Link to="/" className="block py-2 hover:text-blue-200">Home</Link>
+          <Link to="/jobs" className="block py-2 hover:text-blue-200">Find Jobs</Link>
+          <Link to="/training" className="block py-2 hover:text-blue-200">Training</Link>
+          <Link to="/profile" className="block py-2 hover:text-blue-200">My Profile</Link>
+          <Link to="/employer" className="block py-2 hover:text-blue-200">For Employers</Link>
+        </div>
+      )}
+      
+      {isAccessibilityMenuOpen && (
+        <div className="absolute right-4 mt-2 w-64 bg-white text-gray-800 rounded-lg shadow-lg p-4">
+          <h3 className="font-bold mb-2">Accessibility Options</h3>
+          <div className="mb-2">
+            <label className="flex items-center">
+              <input type="checkbox" className="mr-2" />
+              High Contrast
+            </label>
+          </div>
+          <div className="mb-2">
+            <label className="flex items-center">
+              <input type="checkbox" className="mr-2" />
+              Larger Text
+            </label>
+          </div>
+          <div className="mb-2">
+            <label className="flex items-center">
+              <input type="checkbox" className="mr-2" />
+              Screen Reader Mode
+            </label>
+          </div>
+          <Link to="/accessibility" className="text-blue-600 block mt-2">
+            More Accessibility Options
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default NavBar;
