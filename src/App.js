@@ -8,7 +8,7 @@ import JobApplicationForm from './components/JobApplicationForm';
 import HomePage from './pages/HomePage';
 import JobListingsPage from './pages/JobListingsPage';
 import JobDetailsPage from './pages/JobDetailsPage';
-import login from './pages/login';
+import LoginSignup from './pages/login';
 import ProfilePage from './pages/ProfilePage';
 import TrainingResourcesPage from './pages/TrainingResourcesPage';
 import AccessibilityHelpCenter from './pages/AccessibilityHelpCenter';
@@ -57,7 +57,7 @@ function App() {
                   </ProtectedRoute>
                 } 
               />
-              <Route path="/login" element={<login />} />
+              <Route path="/login" element={<LoginSignup />} />
               <Route 
                 path="/profile" 
                 element={
