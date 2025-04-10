@@ -9,7 +9,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Check authentication state on mount and when location changes
+  
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
@@ -39,7 +39,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white p-4">
+    <nav className="bg-yellow-600 text-white p-4 shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">EmpowerJobs</Link>
         
