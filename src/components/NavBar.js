@@ -1,9 +1,42 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAccessibilityMenuOpen, setIsAccessibilityMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userRole, setUserRole] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Check authentication state on mount and when location changes
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+      setIsLoggedIn(true);
+      setUserRole(user.role);
+    } else {
+      setIsLoggedIn(false);
+      setUserRole('');
+    }
+  }, [location]); // Re-run when location changes
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setIsLoggedIn(false);
+    setUserRole('');
+    navigate('/login');
+  };
+
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      navigate('/login');
+    } else {
+      navigate(path);
+    }
+  };
 
   return (
     <nav className="bg-blue-600 text-white p-4">
@@ -12,16 +45,61 @@ const NavBar = () => {
         
         <div className="hidden md:flex space-x-6">
           <Link to="/" className="hover:text-blue-200">Home</Link>
-          <Link to="/jobs" className="hover:text-blue-200">Find Jobs</Link>
-          <Link to="/training" className="hover:text-blue-200">Training</Link>
-          <Link to="/profile" className="hover:text-blue-200">My Profile</Link>
-          <Link to="/employer" className="hover:text-blue-200">For Employers</Link>
+          <Link 
+            to="/jobs" 
+            className="hover:text-blue-200"
+            onClick={(e) => handleNavigation(e, '/jobs')}
+          >
+            Find Jobs
+          </Link>
+          <Link 
+            to="/training" 
+            className="hover:text-blue-200"
+            onClick={(e) => handleNavigation(e, '/training')}
+          >
+            Training
+          </Link>
+          <Link 
+            to="/profile" 
+            className="hover:text-blue-200"
+            onClick={(e) => handleNavigation(e, '/profile')}
+          >
+            My Profile
+          </Link>
+          {userRole === 'employer' && (
+            <Link 
+              to="/employer" 
+              className="hover:text-blue-200"
+              onClick={(e) => handleNavigation(e, '/employer')}
+            >
+              For Employers
+            </Link>
+          )}
         </div>
         
-        <div className="flex items-center">
+        <div className="flex items-center space-x-4">
+          {!isLoggedIn ? (
+            <>
+              <Link to="/login" className="hover:text-blue-200">Login</Link>
+              <Link to="/login?tab=signup" className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-100">
+                Sign Up
+              </Link>
+            </>
+          ) : (
+            <>
+              <span className="text-sm">Welcome, {JSON.parse(localStorage.getItem('user'))?.name}</span>
+              <button 
+                onClick={handleLogout}
+                className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-100"
+              >
+                Logout
+              </button>
+            </>
+          )}
+          
           <button 
             aria-label="Accessibility Options" 
-            className="bg-blue-700 p-2 rounded-full mr-4"
+            className="bg-blue-700 p-2 rounded-full"
             onClick={() => setIsAccessibilityMenuOpen(!isAccessibilityMenuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,10 +124,36 @@ const NavBar = () => {
       {isMenuOpen && (
         <div className="container mx-auto mt-4 p-4 bg-blue-700 rounded-lg md:hidden">
           <Link to="/" className="block py-2 hover:text-blue-200">Home</Link>
-          <Link to="/jobs" className="block py-2 hover:text-blue-200">Find Jobs</Link>
-          <Link to="/training" className="block py-2 hover:text-blue-200">Training</Link>
-          <Link to="/profile" className="block py-2 hover:text-blue-200">My Profile</Link>
-          <Link to="/employer" className="block py-2 hover:text-blue-200">For Employers</Link>
+          <Link 
+            to="/jobs" 
+            className="block py-2 hover:text-blue-200"
+            onClick={(e) => handleNavigation(e, '/jobs')}
+          >
+            Find Jobs
+          </Link>
+          <Link 
+            to="/training" 
+            className="block py-2 hover:text-blue-200"
+            onClick={(e) => handleNavigation(e, '/training')}
+          >
+            Training
+          </Link>
+          <Link 
+            to="/profile" 
+            className="block py-2 hover:text-blue-200"
+            onClick={(e) => handleNavigation(e, '/profile')}
+          >
+            My Profile
+          </Link>
+          {userRole === 'employer' && (
+            <Link 
+              to="/employer" 
+              className="block py-2 hover:text-blue-200"
+              onClick={(e) => handleNavigation(e, '/employer')}
+            >
+              For Employers
+            </Link>
+          )}
         </div>
       )}
       
