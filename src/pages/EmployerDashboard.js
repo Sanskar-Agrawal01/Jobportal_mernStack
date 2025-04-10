@@ -3,16 +3,27 @@ import React, { useState } from 'react';
 const EmployerDashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [jobPostings, setJobPostings] = useState([
-    { id: 1, title: 'Frontend Developer', location: 'Remote', applicants: 12 },
-    { id: 2, title: 'UX Designer', location: 'New York, NY', applicants: 8 },
+    { 
+      id: 1, 
+      title: 'Handicraft Trainer', 
+      location: 'Anandwan Workshops & Online', 
+      applicants: 15 
+    }, 
+    { 
+      id: 2, 
+      title: 'Agricultural Skills Mentor', 
+      location: 'Anandwan Campus & Nearby Villages', 
+      applicants: 10 
+    }
+    
   ]);
   const [newJob, setNewJob] = useState({ title: '', description: '', location: '', requirements: '' });
   const [selectedJob, setSelectedJob] = useState(null);
   const [applicants, setApplicants] = useState([
-    { id: 1, name: 'Alex Johnson', jobId: 1, status: 'Review', resume: 'resume_link', coverLetter: 'cover_letter_link' },
-    { id: 2, name: 'Sam Wilson', jobId: 1, status: 'Interview', resume: 'resume_link', coverLetter: 'cover_letter_link' },
-    { id: 3, name: 'Taylor Reed', jobId: 2, status: 'New', resume: 'resume_link', coverLetter: 'cover_letter_link' },
-    { id: 4, name: 'Jordan Casey', jobId: 1, status: 'New', resume: 'resume_link', coverLetter: 'cover_letter_link' },
+    { id: 1, name: 'Neel Wankhade', jobId: 1, status: 'Review', resume: 'resume_link', coverLetter: 'cover_letter_link' },
+    { id: 2, name: 'Rahul Zade', jobId: 1, status: 'Interview', resume: 'resume_link', coverLetter: 'cover_letter_link' },
+    { id: 3, name: 'Rajat Patidar', jobId: 2, status: 'New', resume: 'resume_link', coverLetter: 'cover_letter_link' },
+    { id: 4, name: 'Shivam Dube', jobId: 1, status: 'New', resume: 'resume_link', coverLetter: 'cover_letter_link' },
   ]);
 
   // Function to handle creating a new job

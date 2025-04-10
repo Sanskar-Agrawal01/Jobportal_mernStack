@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">EmpowerJobs</h3>
+            <h3 className="text-xl font-bold mb-4">Karmabhoomi</h3>
             <p>Connecting people with meaningful work opportunities regardless of skill level or ability.</p>
           </div>
           
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-4 border-t border-gray-700 text-center">
-          <p>&copy; 2025 EmpowerJobs. All rights reserved.</p>
+          <p>&copy; 2025 Karmabhoomi. All rights reserved.</p>
         </div>
       </div>
     </footer>

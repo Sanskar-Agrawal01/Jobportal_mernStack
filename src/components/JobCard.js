@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { jobs } from '../data/jobs';
 
 const JobCard = ({ job }) => {
   // Ensure skills is an array, default to empty array if undefined
@@ -10,11 +11,13 @@ const JobCard = ({ job }) => {
       <div className="p-6">
         <div className="flex items-start justify-between">
           <div className="flex items-start">
-            <img 
-              src={job.logo || '/placeholder-logo.png'} 
-              alt={`${job.company} logo`} 
-              className="w-16 h-16 rounded object-cover mr-4"
+           
+            <img
+                src={jobs.logo || '/images/placeholder-logo.png'}
+                alt={`${jobs.company} logo`}
+                className="w-16 h-16 rounded object-cover mr-4"
             />
+
             <div>
               <h2 className="text-xl font-bold text-gray-800 mb-1">
                 <Link to={`/jobs/${job.id}`} className="hover:text-blue-600">
