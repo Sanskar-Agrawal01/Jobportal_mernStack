@@ -1,25 +1,32 @@
+
 export const userProfile = {
     id: 1,
-    name: "Jamie Smith",
-    email: "jamie.smith@example.com",
-    phone: "(555) 123-4567",
-    location: "Chicago, IL",
-    skills: ["Customer service", "Basic computer knowledge", "Cash handling"],
+    name: "Aarav Patil",
+    email: "aarav.patil@gmail.com",
+    phone: "(+91) 98765 43210",
+    location: "Anandvan, Maharashtra",
+    skills: ["Pottery", "Embroidery", "Weaving"],
     experience: [
       {
-        title: "Cashier",
-        company: "Corner Store",
-        duration: "2022-2023",
-        description: "Operated cash register and helped customers find products"
+        title: "Handicraft Maker",
+        company: "Anandvan Cooperative",
+        duration: "2021-2024",
+        description: "Created eco-friendly and handmade products for local and online sales."
+      },
+      {
+        title: "Assistant Trainer",
+        company: "Local Workshops",
+        duration: "2020-2021",
+        description: "Assisted in teaching embroidery and weaving techniques to new artisans."
       }
     ],
-    education: "High School Diploma",
+    education: "High School Equivalent Certification",
     preferences: {
-      jobTypes: ["Full-time", "Part-time"],
-      locations: ["Chicago - Downtown", "Chicago - North Side"],
-      accommodations: ["Flexible hours", "Limited standing"]
+      jobTypes: ["Part-time", "Flexible"],
+      locations: ["Anandvan Workshops", "Nearby Villages"],
+      accommodations: ["Accessible workspace", "Flexible hours"]
     },
-    appliedJobs: [1, 4, 6],
-    savedJobs: [2, 5]
-  };
-  
+    appliedJobs: [1],
+    savedJobs: [3, 6]
+};
+

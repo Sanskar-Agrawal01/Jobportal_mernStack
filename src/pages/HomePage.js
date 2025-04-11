@@ -53,7 +53,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-800">Our Social Mission</h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-16">
-            At EmpowerJobs, we believe that everyone deserves equal access to meaningful employment. Our platform is designed to remove barriers and create pathways to economic independence for underserved communities, people with disabilities, and those facing employment challenges.
+            At Karmabhoomi, we believe that everyone deserves equal access to meaningful employment. Our platform is designed to remove barriers and create pathways to economic independence for underserved communities, people with disabilities, and those facing employment challenges.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
@@ -96,7 +96,7 @@ const HomePage = () => {
       {/* How It Works Section */}
       <section className="py-24 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">How EmpowerJobs Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">How Karmabhoomi Works</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
@@ -105,7 +105,7 @@ const HomePage = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Create Your Profile</h3>
               <p className="text-gray-600 mb-6 text-center">Our accessible profile builder focuses on your strengths and accommodations needed. No traditional resume required.</p>
-              <img src="/api/placeholder/300/180" alt="Profile creation" className="rounded-xl mx-auto shadow-md" />
+              <img src="/images/prfcreate.jpg" alt="Profile creation" className="rounded-xl mx-auto shadow-md" />
             </div>
             
             <div className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
@@ -114,7 +114,7 @@ const HomePage = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Find Matching Jobs</h3>
               <p className="text-gray-600 mb-6 text-center">Our inclusive search tools match you with jobs based on your abilities, needs, and workplace accommodations.</p>
-              <img src="/api/placeholder/300/180" alt="Job search" className="rounded-xl mx-auto shadow-md" />
+              <img src="/images/jobsearch.jpg" alt="Job search" className="rounded-xl mx-auto shadow-md" />
             </div>
             
             <div className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
@@ -123,7 +123,7 @@ const HomePage = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Apply with Confidence</h3>
               <p className="text-gray-600 mb-6 text-center">Our simplified application process connects you directly with employers who value diversity and inclusion.</p>
-              <img src="/api/placeholder/300/180" alt="Job application" className="rounded-xl mx-auto shadow-md" />
+              <img src="/images/jobappli.jpg" alt="Job application" className="rounded-xl mx-auto shadow-md" />
             </div>
           </div>
           
@@ -180,8 +180,8 @@ const HomePage = () => {
               <div className="relative">
                 <div className="absolute -left-8 -top-8 bg-blue-100 rounded-2xl w-full h-full"></div>
                 <img 
-                  src="/api/placeholder/500/350" 
-                  alt="Person learning new skills" 
+                  src="/images/people.jpeg" 
+                  alt="People learning new skills" 
                   className="rounded-2xl shadow-xl relative z-10"
                 />
               </div>
@@ -190,53 +190,54 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-b from-blue-50 to-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Success Stories</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
-              <div className="flex items-center mb-6">
-                <img src="/api/placeholder/60/60" alt="Profile" className="w-16 h-16 rounded-full shadow-md" />
-                <div className="ml-6">
-                  <h4 className="text-xl font-bold text-gray-800">Maria J.</h4>
-                  <p className="text-gray-600">Healthcare Assistant</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "As a single mom with limited job experience, I struggled to find opportunities. EmpowerJobs connected me with a healthcare employer who provided on-the-job training. I'm now financially independent and building a career I love."
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
-              <div className="flex items-center mb-6">
-                <img src="/api/placeholder/60/60" alt="Profile" className="w-16 h-16 rounded-full shadow-md" />
-                <div className="ml-6">
-                  <h4 className="text-xl font-bold text-gray-800">James T.</h4>
-                  <p className="text-gray-600">IT Support Specialist</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "Living with autism, traditional interviews were always challenging for me. EmpowerJobs helped me showcase my technical skills instead, and connected me with an employer who values neurodiversity. I'm thriving in my IT role."
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
-              <div className="flex items-center mb-6">
-                <img src="/api/placeholder/60/60" alt="Profile" className="w-16 h-16 rounded-full shadow-md" />
-                <div className="ml-6">
-                  <h4 className="text-xl font-bold text-gray-800">Sarah L.</h4>
-                  <p className="text-gray-600">Administrative Assistant</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "After a workplace injury, I needed to change careers. The free training resources and supportive community at EmpowerJobs helped me gain office skills and find an accessible workplace that accommodates my physical needs."
-              </p>
-            </div>
+  
+{/* Testimonials Section */}
+<section className="py-24 bg-gradient-to-b from-green-50 to-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Success Stories</h2>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
+        <div className="flex items-center mb-6">
+          <img src="/images/user2.jpg" alt="Profile" className="w-16 h-16 rounded-full shadow-md" />
+          <div className="ml-6">
+            <h4 className="text-xl font-bold text-gray-800">Aarav Patil</h4>
+            <p className="text-gray-600">Handicraft Trainer</p>
           </div>
         </div>
-      </section>
+        <p className="text-gray-600 italic">
+          "Thanks to the job portal, I found an opportunity to teach handicraft skills to others. It's fulfilling to share my experience and help others in Anandwan earn a livelihood through crafts."
+        </p>
+      </div>
+      
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
+        <div className="flex items-center mb-6">
+          <img src="/images/user1.jpg" alt="Profile" className="w-16 h-16 rounded-full shadow-md" />
+          <div className="ml-6">
+            <h4 className="text-xl font-bold text-gray-800">Neha Sharma</h4>
+            <p className="text-gray-600">Agricultural Skills Mentor</p>
+          </div>
+        </div>
+        <p className="text-gray-600 italic">
+          "After joining as an agricultural mentor, I’ve not only taught sustainable farming techniques but also learned from the community’s innovative ideas. It’s a rewarding journey for me."
+        </p>
+      </div>
+      
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 transition-transform">
+        <div className="flex items-center mb-6">
+          <img src="/images/user3.jpg" alt="Profile" className="w-16 h-16 rounded-full shadow-md" />
+          <div className="ml-6">
+            <h4 className="text-xl font-bold text-gray-800">Ravi Deshmukh</h4>
+            <p className="text-gray-600">Digital Literacy Trainer</p>
+          </div>
+        </div>
+        <p className="text-gray-600 italic">
+          "The portal helped me start as a digital literacy trainer for Anandwan residents. It feels great to empower others with essential tech skills to succeed in today’s world."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       
       {/* Community Section */}
       <section className="py-24 bg-white">
@@ -250,7 +251,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Find Your Next Job?</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto">
-            Join thousands of job seekers who have found meaningful employment through EmpowerJobs. Everyone deserves the dignity and independence that comes with employment.
+            Join thousands of job seekers who have found meaningful employment through Karmabhoomi. Everyone deserves the dignity and independence that comes with employment.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link to="/jobs" className="px-10 py-5 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg shadow-lg transform hover:scale-105 transition-transform">

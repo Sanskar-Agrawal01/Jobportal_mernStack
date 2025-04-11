@@ -18,7 +18,7 @@ const CommunitySection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3 text-gray-800">Peer Support</h3>
             <p className="text-gray-600">Connect with others who understand your journey and share experiences.</p>
-            <img src="/api/placeholder/300/200" alt="People in a support meeting" className="rounded-lg mt-4 w-full" />
+            <img src="/images/support.jpg" alt="People in a support meeting" className="rounded-lg mt-4 w-full" />
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
@@ -30,7 +30,7 @@ const CommunitySection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3 text-gray-800">Success Stories</h3>
             <p className="text-gray-600">Be inspired by stories of people who found their ideal job through our platform.</p>
-            <img src="/api/placeholder/300/200" alt="Person celebrating job success" className="rounded-lg mt-4 w-full" />
+            <img src="/images/success1.jpg" alt="Person celebrating job success" className="rounded-lg mt-4 w-full" />
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
@@ -44,7 +44,7 @@ const CommunitySection = () => {
             </div>
             <h3 className="text-xl font-bold mb-3 text-gray-800">Local Events</h3>
             <p className="text-gray-600">Join workshops, job fairs, and meetups in your local community.</p>
-            <img src="/api/placeholder/300/200" alt="Community job fair" className="rounded-lg mt-4 w-full" />
+            <img src="/images/jobfair.jpg" alt="Community job fair" className="rounded-lg mt-4 w-full" />
           </div>
         </div>
         

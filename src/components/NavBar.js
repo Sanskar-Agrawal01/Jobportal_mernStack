@@ -41,30 +41,30 @@ const NavBar = () => {
   return (
     <nav className="bg-yellow-600 text-white p-4 shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">EmpowerJobs</Link>
+        <Link to="/" className="text-2xl font-bold">Karmabhoomi Portal (कर्मभूमि)</Link>
         
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-blue-200">Home</Link>
+          <Link to="/" className="hover:text-blue-200"><b>Home</b></Link>
           <Link 
             to="/jobs" 
             className="hover:text-blue-200"
             onClick={(e) => handleNavigation(e, '/jobs')}
           >
-            Find Jobs
+            <b>Find Jobs</b>
           </Link>
           <Link 
             to="/training" 
             className="hover:text-blue-200"
             onClick={(e) => handleNavigation(e, '/training')}
           >
-            Training
+            <b>Training</b>
           </Link>
           <Link 
             to="/profile" 
             className="hover:text-blue-200"
             onClick={(e) => handleNavigation(e, '/profile')}
           >
-            My Profile
+            <b>My Profile</b>
           </Link>
           {userRole === 'employer' && (
             <Link 
@@ -72,7 +72,7 @@ const NavBar = () => {
               className="hover:text-blue-200"
               onClick={(e) => handleNavigation(e, '/employer')}
             >
-              For Employers
+              <b>For Employers</b>
             </Link>
           )}
         </div>
