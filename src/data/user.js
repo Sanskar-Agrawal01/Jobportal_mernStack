@@ -2,7 +2,7 @@
 export const userProfile = {
     id: 1,
     name: "Aarav Patil",
-    email: "aarav.patil@example.com",
+    email: "aarav.patil@gmail.com",
     phone: "(+91) 98765 43210",
     location: "Anandvan, Maharashtra",
     skills: ["Pottery", "Embroidery", "Weaving"],
