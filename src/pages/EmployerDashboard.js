@@ -34,6 +34,23 @@ const EmployerDashboard = () => {
     setNewJob({ ...newJob, [name]: value });
   };
 
+  // Function to delete a job posting
+  const handleDeleteJob = (jobId) => {
+    // Remove the job posting
+    setJobPostings(jobPostings.filter(job => job.id !== jobId));
+    
+    // If the deleted job is currently selected, clear the selection
+    if (selectedJob === jobId) {
+      setSelectedJob(null);
+      if (activeTab === 'applicants') {
+        setActiveTab('jobs');
+      }
+    }
+    
+    // Optionally, also remove associated applicants
+    setApplicants(applicants.filter(applicant => applicant.jobId !== jobId));
+  };
+
   // View applicants for a specific job
   const viewApplicants = (jobId) => {
     setSelectedJob(jobId);
@@ -181,7 +198,12 @@ const EmployerDashboard = () => {
                           View Applicants
                         </button>
                         <button className="text-gray-600 hover:text-gray-900 mr-3">Edit</button>
-                        <button className="text-red-600 hover:text-red-900">Delete</button>
+                        <button 
+                          className="text-red-600 hover:text-red-900"
+                          onClick={() => handleDeleteJob(job.id)}
+                        >
+                          Delete
+                        </button>
                       </td>
                     </tr>
                   ))}
